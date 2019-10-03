@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,8 +8,7 @@
     <meta name="author" content="Estratégia Concursos">
     <title>Estratégia Vestibulares | Curso Online para Vestibulares</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
-
+    {% load static %}
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -37,13 +36,13 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="../css/carousel.css" rel="stylesheet">
+    <link href="{% static './css/carousel.css' %}" rel="stylesheet">
   </head>
   <body>
     <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
     <a class="navbar-brand" href="#">
-      <img class="mb-4" src="../img/Logo_Estratégia-Vestibulares.png" alt="Estratégia Vestibulares" width="100">
+      <img class="mb-4" src="{% static './img/Logo_Estratégia-Vestibulares.png' %}" alt="Estratégia Vestibulares" width="100">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -57,10 +56,10 @@
           <a class="nav-link" href="./login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="cadastro">Cadastro</a>
+          <a class="nav-link" href="./cadastro">Cadastro</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="admin">Professor</a>
+          <a class="nav-link" href="/admin">Professor</a>
         </li>
       </ul>
     </div>
@@ -79,17 +78,17 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <a href="https://www.estrategiaconcursos.com.br/gratis/aula-gratuita-matematica-basica/" target="_blank">
-          <img class="bd-placeholder-img" width="100%" height="100%" src="../img/matematica-beaba.jpg" role="img">
+          <img class="bd-placeholder-img" width="100%" height="100%" src="{% static './img/matematica-beaba.jpg' %}" role="img">
         </a>
       </div>
       <div class="carousel-item">
         <a href="https://www.estrategiaconcursos.com.br/gratis/redacao/" target="_blank">
-          <img class="bd-placeholder-img" width="100%" height="100%" src="../img/redacao-banner.jpg" role="img">
+          <img class="bd-placeholder-img" width="100%" height="100%" src="{% static './img/redacao-banner.jpg' %}" role="img">
         </a>
       </div>
       <div class="carousel-item">
         <a href="https://www.estrategiaconcursos.com.br/gratis/ime-2/" target="_blank">
-          <img class="bd-placeholder-img" width="100%" height="100%" src="../img/ime-banner.jpg" role="img">
+          <img class="bd-placeholder-img" width="100%" height="100%" src="{% static './img/ime-banner.jpg' %}" role="img">
         </a>
       </div>
     </div>
@@ -116,28 +115,28 @@
     <div class="row">
       <div class="col-lg-3">
         <div class="text-center">
-          <img class="bd-placeholder-img rounded-circle " width="200" height="200" src="../img/icon-satisfacao-ou-dinheiro-volta-01.svg" role="img">
+          <img class="bd-placeholder-img rounded-circle " width="200" height="200" src="{% static './img/icon-satisfacao-ou-dinheiro-volta-01.svg' %}" role="img">
         </div>
         <h4 class="text-center"><strong>Satisfação ou seu dinheiro de volta</strong></h4>
         <p class="text-center">Confiamos em nosso trabalho. Por isso, você tem 30 dias para testar nossos cursos. Consulte nossos Termos de Uso. Vem ser um Estrategista.</p>
       </div>
       <div class="col-lg-3">
         <div class="text-center">
-          <img class="bd-placeholder-img rounded-circle " width="200" height="200" src="../img/icon-download-ilimitado-df-02.svg" role="img">
+          <img class="bd-placeholder-img rounded-circle " width="200" height="200" src="{% static './img/icon-download-ilimitado-df-02.svg' %}" role="img">
         </div>
         <h4 class="text-center"><strong>Download ilimitado</strong></h4>
         <p class="text-center">Não há limites de visualizações ou de downloads. Baixe as videoaulas, PDFs e trilhas para estudar quando e onde você estiver.</p>
       </div>
       <div class="col-lg-3">
         <div class="text-center">
-          <img class="bd-placeholder-img rounded-circle " width="200" height="200" src="../img/icon-forum-de-duvidas-03.svg" role="img">
+          <img class="bd-placeholder-img rounded-circle " width="200" height="200" src="{% static './img/icon-forum-de-duvidas-03.svg' %}" role="img">
         </div>
         <h4 class="text-center"><strong>Fórum de Dúvidas</strong></h4>
         <p class="text-center">Envie perguntas pela nossa plataforma e acompanhe as dúvidas dos outros alunos. Nossos professores vão auxiliá-los respondendo e comentando dúvidas.</p>
       </div>
       <div class="col-lg-3">
         <div class="text-center">
-          <img class="bd-placeholder-img rounded-circle " width="200" height="200" src="../img/icon-trilhas-estrategicas-04.svg" role="img">
+          <img class="bd-placeholder-img rounded-circle " width="200" height="200" src="{% static './img/icon-trilhas-estrategicas-04.svg' %}" role="img">
         </div>
         <h4 class="text-center"><strong>Trilhas Estratégicas</strong></h4>
         <p class="text-center">Saiba o que e como estudar. As Trilhas Estratégicas são preparadas por alunos recém aprovados nos vestibulares mais difíceis do Brasil (ITA, IME, Medicina/USP, Psicologia/USP, Direito/USP, entre outros).</p>
@@ -154,5 +153,6 @@
   </footer>
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="../js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src=
+      "{% static './js/bootstrap.bundle.min.js' %}" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
 </html>

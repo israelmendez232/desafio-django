@@ -12,8 +12,4 @@ urlpatterns = [
     path('login/', login),
     path('area-do-aluno/', area),
     path('area-do-aluno-info/', areaInfo),
-]
-
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
