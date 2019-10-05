@@ -34,6 +34,11 @@
           font-size: 3.5rem;
         }
       }
+
+      .carousel {
+        max-height: 22rem;
+      }
+
     </style>
     <!-- Custom styles for this template -->
     <link href="{% static './css/carousel.css' %}" rel="stylesheet">
@@ -41,8 +46,10 @@
   <body>
     <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-    <a class="navbar-brand" href="#">
-      <img class="mb-4" src="{% static './img/Logo_Estratégia-Vestibulares.png' %}" alt="Estratégia Vestibulares" width="100">
+    <a class="navbar-brand" class="text-center" href="#">
+      <div class="text-center">
+        <img style="margin: auto" src="{% static './img/Logo_Estratégia-Vestibulares.png' %}" alt="Estratégia Vestibulares" width="100">
+      </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -53,10 +60,10 @@
           <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./login">Login</a>
+          <a class="nav-link" href="/login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./cadastro">Cadastro</a>
+          <a class="nav-link" href="/cadastro">Cadastro</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/admin">Professor</a>
@@ -78,17 +85,17 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <a href="https://www.estrategiaconcursos.com.br/gratis/aula-gratuita-matematica-basica/" target="_blank">
-          <img class="bd-placeholder-img" width="100%" height="100%" src="{% static './img/matematica-beaba.jpg' %}" role="img">
+          <img class="bd-placeholder-img" width="100%" height="70%" src="{% static './img/matematica-beaba.jpg' %}" role="img">
         </a>
       </div>
       <div class="carousel-item">
         <a href="https://www.estrategiaconcursos.com.br/gratis/redacao/" target="_blank">
-          <img class="bd-placeholder-img" width="100%" height="100%" src="{% static './img/redacao-banner.jpg' %}" role="img">
+          <img class="bd-placeholder-img" width="100%" height="70%" src="{% static './img/redacao-banner.jpg' %}" role="img">
         </a>
       </div>
       <div class="carousel-item">
         <a href="https://www.estrategiaconcursos.com.br/gratis/ime-2/" target="_blank">
-          <img class="bd-placeholder-img" width="100%" height="100%" src="{% static './img/ime-banner.jpg' %}" role="img">
+          <img class="bd-placeholder-img" width="100%" height="70%" src="{% static './img/ime-banner.jpg' %}" role="img">
         </a>
       </div>
     </div>
@@ -103,14 +110,7 @@
     </a>
   </div>
 
-
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
   <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
     <h2 class="text-center"><strong>Por que escolher o Estratégia Vestibulares?</strong></h2>
     <div class="row">
       <div class="col-lg-3">
@@ -142,17 +142,20 @@
         <p class="text-center">Saiba o que e como estudar. As Trilhas Estratégicas são preparadas por alunos recém aprovados nos vestibulares mais difíceis do Brasil (ITA, IME, Medicina/USP, Psicologia/USP, Direito/USP, entre outros).</p>
       </div>
     </div><!-- /.row -->
+    
+  <hr class="featurette-divider">
 
   </div><!-- /.container -->
 
 
   <!-- FOOTER -->
-  <footer class="container bg-dark">
+
+  <footer class="container bg-light">
     <p class="float-right"><a href="#">Voltar para o Topo</a></p>
-    <p>&copy; ©2019 - Estratégia Vestibulares - Cursos Online para Vestibulares. Todos os direitos reservados CNPJ: 13.877.842/0001-78 &middot; 
+    <p>&copy; 2019 - Estratégia Vestibulares - Cursos Online para Vestibulares. Todos os direitos reservados CNPJ: 13.877.842/0001-78 &middot; 
   </footer>
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src=
-      "{% static './js/bootstrap.bundle.min.js' %}" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
+      "{% static './js/bootstrap.bundle.min.js' %}" integrity="" crossorigin="anonymous"></script></body>
 </html>
