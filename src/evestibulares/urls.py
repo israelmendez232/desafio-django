@@ -8,9 +8,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('cadastro/', cadastro),
-    path('login/', login),
+    path('login/', login), 
     path('area-do-aluno/', area),
     path('area-do-aluno-info/', areaInfo),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 admin.site.site_header = settings.ADMIN_SITE_HEADER

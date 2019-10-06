@@ -104,5 +104,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'./evestibulares/static'), # if your static files folder is named "staticfiles"
 )
 
-# Specials Config
+MEDIA_URL = '/media/imagens/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'evestibulares/media')
+
+# Special Config
 ADMIN_SITE_HEADER = "Admin | Estratégia Vestibulares"
