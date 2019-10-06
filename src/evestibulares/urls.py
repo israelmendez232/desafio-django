@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
+from django.contrib import admin
 from django.conf.urls.static import static
-from .views import index, cadastro, login, area, areaInfo
+from .views import index, cadastro, login, area, areaInfo, pagina404, areaCurso
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -11,6 +12,10 @@ urlpatterns = [
     path('login/', login), 
     path('area-do-aluno/', area),
     path('area-do-aluno-info/', areaInfo),
+    path('pagina-nao-encontrada/', pagina404),
+    path('area-do-aluno/<int:id>/', areaCurso, name = "id"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-admin.site.site_header = settings.ADMIN_SITE_HEADER
+admin.site.site_header = 'Administração para Professores'
+admin.site.index_title = 'Altere/Crie os Cursos'
+admin.site.site_title = 'Estratégia Vestibulares'

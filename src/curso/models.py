@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.text import slugify
+from django.urls import reverse
 
 class Apostila(models.Model):    
     titulo = models.CharField(max_length=255) 
@@ -11,6 +13,11 @@ class Curso(models.Model):
     titulo = models.CharField(max_length=255)   
     descricao = models.TextField('Descrição', max_length=255, blank=True, null=True)    
     imagem = models.FileField('Imagem', upload_to='imagens', blank=True, null=True)    
+
+    def get_absolute_url(self):
+        # return f"/area-do-aluno/<self:slug>/"
+        return reverse("id", kwargs={"id": self.id})
+
     def __str__(self):        
         return self.titulo
 

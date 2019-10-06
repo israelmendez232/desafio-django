@@ -15,6 +15,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# DEBUG = False
+# ALLOWED_HOSTS = ['*']
+
 
 # Application definition
 
@@ -106,6 +109,3 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/media/imagens/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'evestibulares/media')
-
-# Special Config
-ADMIN_SITE_HEADER = "Admin | Estratégia Vestibulares"
