@@ -8,7 +8,7 @@
     <meta name="author" content="Estratégia Concursos">
     <title>Área do Aluno | Estratégia Vestibulares</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+    {% load static %}
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -37,12 +37,12 @@
   <body>
     <nav class="navbar navbar-light fixed-top bg-light flex-md-nowrap p-0 shadow">
     <a class="bg-light" href="#">
-      <img class="my-2 mx-4" src="../img/Logo_Estratégia-Vestibulares.png" alt="Estratégia Vestibulares" width="130">
+      <img class="my-2 mx-4" src="{% static './img/Logo_Estratégia-Vestibulares.png' %}" alt="Estratégia Vestibulares" width="130">
     </a>
   <input class="form-control form-control-light w-100" type="text" placeholder="Buscar Cursos" aria-label="Search">
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="./login">Sair</a>
+      <a class="nav-link" href="/login/">Sair</a>
     </li>
   </ul>
 </nav>
@@ -53,13 +53,13 @@
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="admin">
+            <a class="nav-link active" href="#">
               <span data-feather="home"></span>
               Cursos  <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin-info">
+            <a class="nav-link" href="/area-do-aluno-info/">
               <span data-feather="file"></span>
               Informações
             </a>
@@ -239,5 +239,6 @@
       <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="{% static './js/bootstrap.bundle.min.js' %}" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-        <script src="../js/dashboard.js"></script></body>
+        <script src="{% static './js/dashboard.js' %}"></script></body>
 </html>
+

@@ -2,7 +2,9 @@ from django.db import models
 
 class Apostila(models.Model):    
     titulo = models.CharField(max_length=255) 
-    numero = models.IntegerField(blank=True, null=True)    
+    numero = models.IntegerField('Número', blank=True, null=True)
+    imagem = models.FileField('Imagem', blank=True, null=True)    
+    pdf = models.FileField(upload_to='router_specifications', blank=True)    
     def __str__(self):        
         return self.titulo
 
