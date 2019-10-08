@@ -92,13 +92,14 @@
             <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">
               <div class="card-body">
                 <div class="m-3">
-                  {{ curso.descricao }} <a href="#">(Baixe Aqui)</a> <br>
                 </div>
                 <div class="m-3">
-                  {{ curso.descricao }} <a href="#">(Baixe Aqui)</a> <br>
-                </div>
-                <div class="m-3">
-                  {{ curso.descricao }} <a href="#">(Baixe Aqui)</a> <br>
+                  {% pegarApostilas aula.id as apostilas %}
+                    {% for apostila in apostilas %}
+                      <div class="m-3">
+                        {{ apostila.titulo }} <a href="{{ apostila.pdf.url }}" target="_blank">(Baixe Aqui)</a> <br>
+                      </div>
+                    {% endfor %}
                 </div>
             </div>
           </div>

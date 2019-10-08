@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404
 from curso.models import Curso, Apostila, Aula
+from django.template.defaulttags import register
 
 cursos = Curso.objects.all()
 aulas = Aula.objects.all()
@@ -27,13 +28,27 @@ def pagina404(request, param):
 def areaInfo(request):
     return render(request, 'area-info.html', {})
 
+@register.simple_tag
 def areaCurso(request, id):
     id = Curso.objects.get(id=id)
     aulas = Aula.objects.filter(curso__titulo=id.titulo).values().all()
-    # apostilas = Apostila.objects.filter(aulas__titulo=aula_id)
+    apostilas = Apostila.objects.all()
+
+    # Aula.objects.filter(curso__pk=1)
+    # Curso.objects.filter(pk=1)
+    # Apostila.objects.filter(aulas__pk=1)
+    # 
+    # 
+    # Aula.objects.filter(curso__titulo='Curso de Literatura para ITA 2020')
+    # Apostila.objects.filter(aulas__titulo='00 Literatura do Brasil Colônia - ITA')
     context = {
         "curso": id,
         "aulas": aulas,
-        # "apostilas": apostilas,
+        "apostilas": apostilas,
     }
+
     return render(request, 'area-curso.html', context)
+
+@register.simple_tag
+def pegarApostilas(aulaID):
+    return Apostila.objects.filter(aulas__id=aulaID).values().all()
