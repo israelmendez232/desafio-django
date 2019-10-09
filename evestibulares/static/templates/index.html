@@ -36,10 +36,6 @@
         }
       }
 
-      .carousel {
-        max-height: 22rem;
-      }
-
       /* equal card height */
       .row-equal > div[class*='col-'] {
           display: flex;
@@ -48,6 +44,10 @@
 
       .row-equal .card {
         width: 100%;
+      }
+
+      .myCarousel {
+        max-height: 70%;
       }
 
       /* ensure equal card height inside carousel */
@@ -116,17 +116,17 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <a href="https://www.estrategiaconcursos.com.br/gratis/aula-gratuita-matematica-basica/" target="_blank">
-          <img class="bd-placeholder-img" width="100%" height="70%" src="{% static './img/matematica-beaba.jpg' %}" role="img">
+          <img class="bd-placeholder-img" width="100%" height="100%" src="{% static './img/matematica-beaba.jpg' %}" role="img">
         </a>
       </div>
       <div class="carousel-item">
         <a href="https://www.estrategiaconcursos.com.br/gratis/redacao/" target="_blank">
-          <img class="bd-placeholder-img" width="100%" height="70%" src="{% static './img/redacao-banner.jpg' %}" role="img">
+          <img class="bd-placeholder-img" width="100%" height="100%" src="{% static './img/redacao-banner.jpg' %}" role="img">
         </a>
       </div>
       <div class="carousel-item">
         <a href="https://www.estrategiaconcursos.com.br/gratis/ime-2/" target="_blank">
-          <img class="bd-placeholder-img" width="100%" height="70%" src="{% static './img/ime-banner.jpg' %}" role="img">
+          <img class="bd-placeholder-img" width="100%" height="100%" src="{% static './img/ime-banner.jpg' %}" role="img">
         </a>
       </div>
     </div>
@@ -143,7 +143,7 @@
 
   <div class="container marketing">
     <h2 class="text-center mb-5"><strong>Cursos</strong></h2>
-
+    
       <div class="card-columns">
         {% for curso in cursos %}
           <div class="card">
