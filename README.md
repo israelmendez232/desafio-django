@@ -28,14 +28,14 @@ Para ativar o projeto é necessário as seguintes especificações:
 
 - Docker para instalar e rodar ambiente;
 
-- Uso de Python 3.7.
+- Uso de Python 3 ou mais.
 
 Segue os **passos**:
 
-1. Instalar o ambiente ao acionar o arquivo `Dockerfile`que fica na pasta inicial;
+1. Baixar os arquivos através do `git clone`;
 
-2. Ao fazer isso, você também instalará as dependências necessárias para o projeto (que é apenas a biblioteca de Django);
+2. Entre na pasta pelo terminal, agora crie a imagem. Ela vai instalar todas as dependências e ferramentas necessárias com `docker-compose run web django-admin.py startproject desafio-django .` ;
 
-3. Para rodar o site, execute: `python manage.py runserver`
+3. Ative a imagem: `docker-compose up`;
 
-
+4. Por fim, entre no link: `http://localhost:8000/`.

@@ -27,6 +27,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN pip3 install --upgrade pip 
 RUN pip3 install -r requirements.txt
 
+# Servindo o estático:
+RUN python manage.py collectstatic --noinput
+
 # Rodando a aplicação:
 EXPOSE 8000
 CMD ["/start.sh"]
