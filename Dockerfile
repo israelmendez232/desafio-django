@@ -1,10 +1,29 @@
+# Base do container:
 FROM python:3
 
-WORKDIR /usr/src/app
+# Definindo algumas variáveis para o ambiente:
+ENV PYTHONUNBUFFERED 1
+ENV LANG C.UTF-8
+ENV DEBIAN_FRONTEND=noninteractive 
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+# Porta para acessar:
+ENV PORT=8888
 
-COPY . .
+# Instalando dependências do sistema:
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        tzdata \
+        python3-setuptools \
+        python3-pip \
+        git \
+        && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-CMD [ "python", "./your-daemon-or-script.py" ]
+
+# Instalando bibliotecas:
+RUN pip3 install --upgrade pip 
+RUN pip3 install django
+
+# Rodando a aplicação:
+RUN git clone 
+CMD python3 manage.py runserver
