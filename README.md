@@ -39,3 +39,5 @@ Segue os **passos**:
 3. Ative a imagem: `docker-compose up`;
 
 4. Por fim, entre no link: `http://localhost:8000/`.
+
+**Importante:** O arquivo `Dockerfile` é usado para rodar o docker localmente, enquanto o `Dockerfile-local` é para rodar o Django no Heroku.

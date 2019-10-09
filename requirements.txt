@@ -1,2 +1,6 @@
 Django
 whitenoise
+dj-database-url
+django-heroku
+gunicorn
+pytz
