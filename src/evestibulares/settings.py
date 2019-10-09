@@ -11,12 +11,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!)7i+o3*os+mo^nx2tb%3a8eaqqjiyewjyl!%smef%&*j!+p_m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+# ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = []
-
-# DEBUG = False
-# ALLOWED_HOSTS = ['*']
+DEBUG = False
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -29,7 +28,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # own
     'curso'
 ]
 
@@ -107,5 +105,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'./evestibulares/static'), # if your static files folder is named "staticfiles"
 )
 
-MEDIA_URL = '/media/imagens/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'evestibulares/media')

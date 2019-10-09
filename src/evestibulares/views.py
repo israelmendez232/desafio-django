@@ -34,13 +34,6 @@ def areaCurso(request, id):
     aulas = Aula.objects.filter(curso__titulo=id.titulo).values().all()
     apostilas = Apostila.objects.all()
 
-    # Aula.objects.filter(curso__pk=1)
-    # Curso.objects.filter(pk=1)
-    # Apostila.objects.filter(aulas__pk=1)
-    # 
-    # 
-    # Aula.objects.filter(curso__titulo='Curso de Literatura para ITA 2020')
-    # Apostila.objects.filter(aulas__titulo='00 Literatura do Brasil Colônia - ITA')
     context = {
         "curso": id,
         "aulas": aulas,
@@ -51,4 +44,4 @@ def areaCurso(request, id):
 
 @register.simple_tag
 def pegarApostilas(aulaID):
-    return Apostila.objects.filter(aulas__id=aulaID).values().all()
+    return Apostila.objects.filter(aulas__id=aulaID).values().all().order_by('numero')
