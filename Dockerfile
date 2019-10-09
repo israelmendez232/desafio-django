@@ -3,8 +3,11 @@ FROM python:3
 
 # Definindo algumas variáveis para o ambiente:
 ENV PYTHONUNBUFFERED 1
-ENV LANG C.UTF-8
-ENV DEBIAN_FRONTEND=noninteractive 
+
+# Criando o diretório
+RUN mkdir /desafioDjango
+WORKDIR /desafioDjango
+ADD . /desafioDjango/
 
 # Porta para acessar:
 ENV PORT=8888
@@ -22,8 +25,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Instalando bibliotecas:
 RUN pip3 install --upgrade pip 
-RUN pip3 install django
+RUN pip3 install -r requirements.txt
 
 # Rodando a aplicação:
-RUN git clone 
-CMD python3 manage.py runserver
+EXPOSE 8000
+CMD ["/start.sh"]
