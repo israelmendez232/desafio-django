@@ -34,7 +34,7 @@ Segue os **passos**:
 
 1. Baixar os arquivos através do `git clone`;
 
-2. Entre na pasta pelo terminal, agora crie a imagem. Ela vai instalar todas as dependências e ferramentas necessárias com `docker-compose run web django-admin.py startproject desafio-django .` ;
+2. Entre na pasta pelo terminal, agora crie a imagem. Ela vai instalar todas as dependências e ferramentas necessárias com `docker-compose build` ;
 
 3. Ative a imagem: `docker-compose up`;
 
