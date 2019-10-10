@@ -1,7 +1,5 @@
 # Desafio Django
 
-###### [link para o projeto](#)
-
 Desafio em Django para construção de uma área do aluno e registro de materiais. Projeto é dividido em duas partes:
 
 ### Layout
