@@ -1,1 +1,1 @@
-web: gunicorn desafio-django-ev.wsgi
+web: gunicorn desafio-django-ev.wsgi --log-file -
